@@ -1,0 +1,40 @@
+<%
+   section_id = "additional_contact_details" if section_id.blank?
+%>
+
+<%= render_aspace_partial :partial => "additional_contact_details/template" %>
+
+<section id="<%= section_id %>">
+  <h3><%= I18n.t("additional_contact_details._plural") %></h3>
+  <div class="accordion details" id="contact_details_accordion">
+    <%= context.list_for(context["additional_contact_details"], "additional_contact_details[]") do |contact_detail, index| %>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="row collapsed accordion-toggle" data-toggle="collapse" data-parent="#contact_details_accordion" href="#contact_detail_<%= index %>">
+            <div class="col-md-1">
+              <span class="glyphicon"></span>
+            </div>
+            <div class="col-md-1">
+              <%= I18n.t("enumerations.contact_detail_detail_type.#{contact_detail["detail_type"]}", :default => contact_detail["detail_type"]) %>
+            </div>
+            <div class="col-md-3">
+              <% if !contact_detail["type_qualifier"].blank? %>
+                <%= contact_detail["type_qualifier"] %>
+              <% end %>
+            </div>
+            <div class="col-md-7">
+              <%= contact_detail["detail"] %>
+            </div>
+          </div>
+        </div>
+        <div id="contact_detail_<%= index %>" class="accordion-body collapse">
+          <div class="accordion-inner"> 
+            <div class="subrecord-form-container">
+              <%= read_only_view(contact_detail) %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>

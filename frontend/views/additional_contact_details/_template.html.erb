@@ -1,0 +1,7 @@
+<% define_template "additional_contact_detail", jsonmodel_definition(:contact_detail) do |form| %>
+  <div class="subrecord-form-fields">
+    <%= form.label_and_select "detail_type", form.possible_options_for('detail_type', true) %>
+    <%= form.label_and_textfield "type_qualifier" %>
+    <%= form.label_and_textfield "detail" %>
+  </div>
+<% end %>

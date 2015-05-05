@@ -1,0 +1,9 @@
+en:
+  enumerations:
+    contact_detail_type:
+      phone: Phone
+      skype: Skype
+      email: Email
+      facebook: Facebook
+      twitter: Twitter
+      web: Web

@@ -1,0 +1,10 @@
+en:
+  additional_contact_detail:
+    detail_type: Type
+    type_qualifier: Qualifier
+    detail: Detail
+    _singular: Additional Detail
+    _plural: Additional Details
+    _frontend:
+      action:
+        add: Add Additional Detail
