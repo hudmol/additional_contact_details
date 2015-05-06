@@ -7,3 +7,5 @@ en:
       facebook: Facebook
       twitter: Twitter
       web: Web
+  enumeration_names:
+    contact_detail_type: Additional Contact Detail Type
