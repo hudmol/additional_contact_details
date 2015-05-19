@@ -1,8 +1,14 @@
 en:
   additional_contact_detail:
     detail_type: Type
+    detail_type_tooltip: |
+        Type of additional contact details: email, phone, etc.
     type_qualifier: Qualifier
+    type_qualifier_tooltip: |
+        Any information that explains or modifies the Type: Work; Home; Alternate, etc.
     detail: Detail
+    detail_tooltip: |
+        The specific data being recorded: (101)-555-5555; doe@gmail.com, etc.
     _singular: Additional Detail
     _plural: Additional Details
     _frontend:
