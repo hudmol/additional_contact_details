@@ -1,3 +1,6 @@
+<%= render_aspace_partial :partial => "telephones/template" %>
+
+
 <% if defined? form %>
   <%= render_aspace_partial :partial => "additional_contact_details/template", :locals => {:form => form} %>
 <% end %>
@@ -13,11 +16,11 @@
     <%= form.label_and_textfield "region" %>
     <%= form.label_and_textfield "country" %>
     <%= form.label_and_textfield "post_code" %>
-    <%= form.label_and_textfield "telephone" %>
-    <%= form.label_and_textfield "telephone_ext" %>
-    <%= form.label_and_textfield "fax" %>
     <%= form.label_and_textfield "email" %>
     <%= form.label_and_textarea "note" %>
+    <div class="subrecord-form-container">
+      <%= render_aspace_partial :partial => "shared/subrecord_form", :locals => { :form => form,  :name => "telephones", :heading_size => "h5" } %>
+    </div>
 
     <div class="subrecord-form-container">
       <%= render_aspace_partial :partial => "shared/subrecord_form", :locals => {:form => form, :name => "additional_contact_details", :heading_size => "h4"} %>
